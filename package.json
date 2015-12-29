@@ -2,6 +2,10 @@
   "name": "SilverTech Boilerplate",
   "version": "1.0.0",
   "description": "SilverTech Templating Boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deptofjeffayer/Boilerplate"
+  },
   "main": "index.js",
   "scripts": {
     "test": "grunt"

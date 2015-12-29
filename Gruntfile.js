@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 	        },
 	        dist: {
 	            files: {
-	                'prod/library/css/main.css': 'src/sass/main.scss'
+	                'views/library/css/main.css': 'src/sass/main.scss'
 	            }
 	        }
 	    },
@@ -24,8 +24,8 @@ module.exports = function(grunt) {
         		map: true
     		},
     		prod: {
-    			src: 'prod/library/css/main.css',
-    			dest: 'prod/library/css/main.css'
+    			src: 'views/library/css/main.css',
+    			dest: 'views/library/css/main.css'
     		}
     	},
     	express: {
@@ -35,7 +35,8 @@ module.exports = function(grunt) {
 	    			script: 'index.js'
 	    		}
 	    	}
-    	}
+    	},
+
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
