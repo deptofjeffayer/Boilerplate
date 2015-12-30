@@ -5,14 +5,10 @@ var express = require('express'),
     port = Number(process.env.PORT || 1337),
     host = '0.0.0.0';
 
-
-
 //SWIG stuff
 app.engine('html', cons.swig);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
-
-
 
 //Express stuff
 app.use(router);
@@ -23,14 +19,13 @@ router.all('/', function(req, res, next) {
     next();
 });
 
-
+//route any name given after /
 router.get('/:name?', function(req, res) {
 	var view = (req.params.name === undefined) ? 'index' : req.params.name;
-
 	res.render(view);
 });
 
-
+//listen
 var server = app.listen(port, host, function() {
     console.log('Listening on: http://' + host + ':' + port);
 });
