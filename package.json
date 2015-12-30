@@ -1,7 +1,7 @@
 {
-  "name": "SilverTech Boilerplate",
+  "name": "Boilerplate",
   "version": "1.0.0",
-  "description": "SilverTech Templating Boilerplate",
+  "description": "Templating Boilerplate",
   "repository": {
     "type": "git",
     "url": "https://github.com/deptofjeffayer/Boilerplate"
@@ -10,7 +10,7 @@
   "scripts": {
     "test": "grunt"
   },
-  "author": "Silvertech, Inc.",
+  "author": "Jeff Ayer",
   "license": "ISC",
   "devDependencies": {
     "consolidate": "^0.13.1",
