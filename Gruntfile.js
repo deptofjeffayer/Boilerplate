@@ -5,6 +5,10 @@ module.exports = function(grunt) {
 			css: {
 				files: '**/*.scss',
 				tasks: ['css']
+			},
+			js: {
+				files: 'src/js/**/*.js',
+				tasks: ['js']
 			}
 		},
 	    sass: {
@@ -28,6 +32,15 @@ module.exports = function(grunt) {
     			dest: 'views/library/css/main.css'
     		}
     	},
+    	jshint: {
+			all: ['src/js/**/*.js']
+		},
+		concat: {
+			output: {
+				src: ['src/js/**/*.js'],
+				dest: 'views/library/js/main.js' 
+			}
+		},
     	express: {
     		dev: {
 	    		options: {
@@ -42,8 +55,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-express-server');
 
 	grunt.registerTask('css', ['sass']);
+	grunt.registerTask('js', ['jshint', 'concat']);
 	grunt.registerTask('default', ['express:dev', 'watch']);
 }
